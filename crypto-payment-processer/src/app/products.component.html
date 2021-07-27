@@ -1,0 +1,37 @@
+<!-- <div *ngFor="let product of products">
+    <h1>{{product.name}}</h1>
+    <h1>{{product.description}}</h1>
+    <h1>{{product.price}}</h1>
+    <button type="button" (click)="purchaseHundler(product)">Purchase</button>
+</div> -->
+<div>
+  <h1>Wel Come To Crypto Payment Processer</h1>
+  <h2>Enjoy Your Shopping :)</h2>
+</div>
+
+<div *ngFor="let product of products">
+  <mat-card>
+    <mat-card-header>
+      <div></div>
+      <mat-card-title>{{ product.name }}</mat-card-title>
+      <mat-card-subtitle></mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-md-image src={{product.Myurl}}>
+    <mat-card-content>
+      {{ product.description }}
+    </mat-card-content>
+    <mat-card-footer>
+         ${{ product.price }} <br>
+         <button
+         mat-raised-button
+           color="primary"
+           type="button"
+           (click)="purchaseHundler(product)"
+         >
+           Purchase
+         </button>
+        
+    </mat-card-footer>
+   
+  </mat-card>
+</div>
